@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace pract_11
 {
     public partial class Form1 : Form
     {
+        
+
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +28,16 @@ namespace pract_11
         private void Exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void GetAnswer_Click(object sender, EventArgs e)
+        {
+            Regex regex1 = new Regex("a[hce]b");
+            MatchCollection matches = regex1.Matches(textBox1.Text);
+            for(int i = 0; i < matches.Count; i++)
+            {
+                answerBox1.Text += matches[i].Value + " ";
+            }
         }
     }
 }

@@ -176,6 +176,7 @@
             this.GetAnswer.TabIndex = 5;
             this.GetAnswer.Text = "Получить ответ";
             this.GetAnswer.UseVisualStyleBackColor = true;
+            this.GetAnswer.Click += new System.EventHandler(this.GetAnswer_Click);
             // 
             // Form1
             // 

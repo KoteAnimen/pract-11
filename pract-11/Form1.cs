@@ -33,11 +33,18 @@ namespace pract_11
         private void GetAnswer_Click(object sender, EventArgs e)
         {
             Regex regex1 = new Regex("a[hce]b");
-            MatchCollection matches = regex1.Matches(textBox1.Text);
-            for(int i = 0; i < matches.Count; i++)
+            Regex regex2 = new Regex("a[0-9]+a");            
+            MatchCollection matches1 = regex1.Matches(textBox1.Text);
+            MatchCollection matches2 = regex2.Matches(textBox2.Text);
+            for (int i = 0; i < matches1.Count; i++)
             {
-                answerBox1.Text += matches[i].Value + " ";
+                answerBox1.Text += matches1[i].Value + " ";
             }
+            for (int j = 0; j < matches2.Count; j++)
+            {
+                answerBox2.Text += matches2[j].Value + " ";
+            }
+
         }
     }
 }

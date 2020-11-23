@@ -16,5 +16,15 @@ namespace pract_11
         {
             InitializeComponent();
         }
+
+        private void AboutUs_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Филяк, ИСП-31, вариант 1. Дана строка 'ahb acb aeb aeeb adcb axeb'. Напишите регулярное выражение, которое найдет строки ahb, acb, aeb.  Дана строка 'aa a1a a22a a333a a4444a a55555a aba aca'. Напишите регулярное выражение, которое найдет строки, в которых по краям стоят буквы 'a', а между ними любое количество цифр (в том числе и ноль цифр, то есть строка 'aa'). ");
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
